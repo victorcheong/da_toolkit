@@ -1,0 +1,2 @@
+- lit_review folder contains the documentation and codes for the Lit Review section.
+- explore_source_code folder contains the documentation and codes for the Explore Source Code section.
