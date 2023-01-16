@@ -16,5 +16,4 @@ The command above is an example of how you can run the codes.
 
 # Project Structure
 - TopNLOFKDD-github folder contains the source codes
-- lit_review folder contains the documentation and codes for the Lit Review section
-- explore_source_code folder contains the documentation and codes for the Explore Source Code section
+- documentation folder contains the documentation and codes for all sections
