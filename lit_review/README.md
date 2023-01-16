@@ -1,5 +1,7 @@
 **For more details, please refer to Lit Review pdf file**
 
+**lit_review_screenshots folder contains the screenshots used for the readme document**
+
 # Introduction
 
 5 broad categories for outlier detection:
@@ -34,15 +36,15 @@ For the remaining micro clusters, calculate the LOF scores for all points inside
 # Evaluation Metrics
 
 ## Number of unpruned candidates vs Max Radius
-![Alt text](/lit_review_screenshots/eval_metric1.png) \
+![Alt text](/lit_review/lit_review_screenshots/eval_metric1.png) \
 Increasing max radius will not significantly increase the number of unpruned candidates. Hence, this will not significantly increase runtime.
 
 ## Running time vs max radius
-![Alt text](/lit_review_screenshots/eval_metric2.png) \
+![Alt text](/lit_review/lit_review_screenshots/eval_metric2.png) \
 Increasing max radius will not significantly increase runtime.
 
 ## Runtime vs size of data
-![Alt text](/lit_review_screenshots/eval_metric3.png) \
+![Alt text](/lit_review/lit_review_screenshots/eval_metric3.png) \
 Increasing the size of data will not significantly increase runtime.
 
 # Source Codes
