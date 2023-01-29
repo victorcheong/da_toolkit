@@ -166,7 +166,7 @@ The percentage of anomalies is 0.1%. The contamination parameter for the LOF for
 #### Local Outliers
 | Metric | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
 | :---:   | :---: | :---: |
-| Runtime | Clustering: 83.7 seconds <br /> LOF: 349.5 seconds <br /> Total: **433.2 seconds**| **291.4 seconds**   |
+| Runtime | Clustering: 83.7 seconds <br /> LOF: 246.6 seconds <br /> Total: **330.3 seconds**| **291.4 seconds**   |
 | F1 Score | 95.7%  | 95.6%   |
 
 For the next few experiments on the real world datasets, the contamination parameter will be based on the percentage of anomalies in the training/test sets (does not matter since it is a stratified split).
