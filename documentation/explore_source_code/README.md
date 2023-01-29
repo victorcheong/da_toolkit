@@ -154,6 +154,40 @@ From the experiments conducted above, accuracy between the 2 algorithms are comp
 
 It is to note that Top N LOF takes longer than Sklearn for those datasets that are small enough for both algorithms to run.
 
+## Experiment 13: Sklearn clustering + LOF
+For all experiments below, the chosen clustering algorithm is mini-batch kmeans. The number of clusters is 50.
+### 60 million rows
+The percentage of anomalies is 0.1%. The contamination parameter for the LOF for each cluster will be set as 0.1%.
+#### Global Outliers
+| Metric | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| Runtime | Clustering: 32.7 seconds <br /> LOF: 349.2 seconds <br /> Total: **381.9 seconds**| **317.5 seconds**   |
+| F1 Score | 74.7%  | 74.7%   |
+#### Local Outliers
+| Metric | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| Runtime | Clustering: 83.7 seconds <br /> LOF: 349.5 seconds <br /> Total: **433.2 seconds**| **291.4 seconds**   |
+| F1 Score | 95.7%  | 95.6%   |
+
+For the next few experiments on the real world datasets, the contamination parameter will be based on the percentage of anomalies in the training/test sets (does not matter since it is a stratified split).
+### ML Matt Dataset
+| Metric | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| Runtime | Clustering: 0.2 second <br /> LOF: 0.1 second <br /> Total: **0.3 second**| **2.8 seconds**   |
+| F1 Score | 28.3%  | 28.5%   |
+### Access Behaviour Anomaly Dataset
+| Metric | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| Runtime | Clustering: 0.2 second <br /> LOF: < 0.1 second <br /> Total: **< 0.3 second**| **< 0.1 second**   |
+| F1 Score | 32.8%  | 28.2%   |
+### Energy
+| Metric | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| Runtime | Clustering: 0.2 second <br /> LOF: 0.1 second <br /> Total: **0.3 second**| **0.6 second**   |
+| F1 Score | 32.3%  | 34.3%   |
+
+From the experiments done above, it is inconclusive to determine if the runtime for the 2 step process is slower than a single pass of LOF. F1 scores are largely similar. A single pass of LOF is preferred as there are less codes to run.
+
 # Source Data and Codes
 
 Link to download data & results folder: https://app.box.com/s/yjk0ighknlk2q59ictw75khnp3s22e5d 
