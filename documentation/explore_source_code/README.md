@@ -238,4 +238,4 @@ For Experiment 11, Energy \
 Data used: data\real_world_11 \
 Results stored in: results\real_world_11
 
-The data and results for Experiment 12 have been omitted due to the large size of the files.
+The data and results for Experiment 12 & 13 have been omitted due to the large size of the files.
