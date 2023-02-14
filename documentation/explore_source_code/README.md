@@ -188,6 +188,16 @@ For the next few experiments on the real world datasets, the contamination param
 
 From the experiments done above, it is inconclusive to determine if the runtime for the 2 step process is slower than a single pass of LOF. F1 scores are largely similar. A single pass of LOF is preferred as there are less codes to run.
 
+To validate if the above is true, the algorithms are compared on larger synthetic datasets.
+
+### Global Outliers
+| Size of dataset | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| 70 million rows | Runtime: 95.9 seconds + 376.9 seconds = **472.8 seconds** | Runtime: **353.9 seconds** |
+| 80 million rows | Runtime: 89.3 seconds + 484.7 seconds = **574 seconds** | Runtime: vs code crashes |
+
+Now, the work is to see what is the upper bound of the size of dataset that the 2 step process can handle.
+
 # Source Data and Codes
 
 Link to download data & results folder: https://app.box.com/s/yjk0ighknlk2q59ictw75khnp3s22e5d 
