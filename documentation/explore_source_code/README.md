@@ -196,7 +196,18 @@ To validate if the above is true, the algorithms are compared on larger syntheti
 | 70 million rows | Runtime: 95.9 seconds + 376.9 seconds = **472.8 seconds** | Runtime: **353.9 seconds** |
 | 80 million rows | Runtime: 89.3 seconds + 484.7 seconds = **574 seconds** | Runtime: vs code crashes |
 
-Now, the work is to see what is the upper bound of the size of dataset that the 2 step process can handle.
+Further testing was done to see the largest dataset size that the 2 step process can handle. 
+| Size of dataset | 2 step process (Clustering + Sklearn LOF) | Sklearn LOF |
+| :---:   | :---: | :---: |
+| 70 million rows | Runtime: 95.9 seconds + 376.9 seconds = **472.8 seconds** | Runtime: **353.9 seconds** |
+| 80 million rows | Runtime: 89.3 seconds + 484.7 seconds = **574 seconds** | Runtime: vs code crashes |
+| 100 million rows | Runtime: 160.3 seconds + 594.8 seconds = **755.1 seconds** | Runtime: vs code crashes |
+| 150 million rows | Runtime: 178.1 seconds + 888.7 seconds = **1066.8 seconds** | Runtime: vs code crashes |
+| 200 million rows | Runtime: 108.9 seconds + 1218.4 seconds = **1327.3 seconds** | Runtime: vs code crashes |
+
+The dataset for 250 million rows took too long to be created. As such, the experiment is stopped at 200 million rows. 
+
+The conclusion is that for smaller datasets, the 2 step process will take longer to run than a single pass LOF, but at least it can handle larger datasets.
 
 # Source Data and Codes
 
